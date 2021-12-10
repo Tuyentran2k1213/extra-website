@@ -368,3 +368,69 @@ figure h1{
 
 
 /* footer  */
+footer{
+    background-color: #242424;
+    color: white;
+    height: 270px;
+}
+footer .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav{
+    width: 25%;
+    padding-top: 40px;
+}
+.nav h3{
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.nav ul{
+    list-style: none;
+    color: var(--grey);
+}
+.nav ul li{
+    margin: 15px 0px;
+}
+.navigation ul li a{
+    color: var(--grey);
+    text-decoration: none;
+}
+.navigation ul li a:hover{
+    color: var(--blue);
+}
+.touch2 ul li input, .touch2 ul li button{
+    height: 30px;
+}
+.touch2 ul li input{
+    width: 70%;
+}
+.touch2 ul li button{
+    width: 15%;
+    background-color: var(--orange);
+    border: solid 1px var(--orange);
+    color: white;
+}
+.touch2 ul li button:hover{
+    color: var(--orange);
+    background-color: white;
+    cursor: pointer;
+}
+.footer-logo h1{
+    font-weight: lighter;
+    font-size: 40px;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+.footer-logo p{
+    color: var(--grey);
+    padding: 10px 0px;
+}
+.footer-logo p a{
+    color: var(--orange);
+    text-decoration: none;
+}
+.footer-logo p a:hover{
+    color: rgb(201, 201, 201);
+}
