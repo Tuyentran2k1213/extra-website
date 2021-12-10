@@ -1,0 +1,370 @@
+/* reset all */
+
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}
+:root{
+    --blue: #7ac9ff;
+    --orange: #dc4312;
+    --grey: #a1a3a3;
+    --black: #323232;
+    --background-blue: #29c0ff;
+}
+
+
+
+/* animation */
+
+@keyframes upanddown{
+    0%{
+        transform: translateY(0);
+    } 25%{
+        transform: translateY(-7px);  
+    } 75%{
+        transform: translateY(7px);
+    } 100%{
+        transform: translateY(0);
+    }
+}
+@keyframes rowmove{
+    0%{
+        transform: translateX(0);
+    } 50%{
+        transform: translateX(-10px);
+    } 100%{
+        transform: translateX(0);
+    }
+}
+
+ /* header  */
+
+header{
+    width: 100%;
+    height: 60px;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+header .logo{
+    width: 50%;
+    z-index: 2;
+}
+.logo h1{
+    font-size: 3.7rem;
+    letter-spacing: 5px;
+    color: var(--orange);
+    margin-bottom: -12px;
+}
+.logo p{
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+    padding-left: 25px;
+}
+header nav{
+    width: 50%;
+}
+header nav ul{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header nav ul li{
+    list-style: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: bold;
+}
+header nav ul li a:hover{
+    color: var(--orange);
+}
+.active a{
+    color: var(--orange);
+}
+
+
+
+/* slader  */
+
+.slader{
+    height: 500px;
+    width: 100%;
+    background-image: url(../images-layout1/banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.slader-content{
+    position: absolute;
+    width: 50%;
+    text-align: right;
+    color: var(--black);
+    right: 10%;
+    top: 30%;
+}
+.slader-content h1, .slader-content p{
+    width: auto;
+    background-color: rgba(100, 113, 121, 0.5);
+}
+.slader-content h1{
+    font-size: 3.43rem;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+    padding-bottom: 7px;
+    width: 72%;
+    margin-left: auto;
+}
+.slader-content p{
+    font-size: 1.1rem;
+    letter-spacing: 8px;
+    margin: 20px 0px;
+    width: 50%;
+    margin-left: auto;
+}
+.slader-content p:first-of-type{
+    width: 80%;
+}
+
+
+
+/* section */
+
+section{
+    background-color: var(--background-blue);
+    width: 100%;
+    height: 155px;
+}
+section > .container{
+    padding-top: 25px;
+}
+section h1{
+    color: var(--black);
+    background-color: rgba(100, 113, 121, 0.5);
+    width: 25%;
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+section span{
+    color: white;
+    font-size: 15px;
+}
+
+
+
+/* article */
+
+.welcome{
+    width: 100%;
+}
+.article{
+    text-align: center;
+    padding: 0% 25%;
+    margin: 20px 0px;
+}
+.article h1{
+    padding: 30px 0px;
+}
+.welcome h1{
+    font-size: 2.8rem;
+    font-weight: lighter;
+}
+.welcome span{
+    color: var(--grey);
+}
+.welcome-article{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+}
+.welcome-article img{
+    width: 100%;
+    height: 325px;
+}
+.article-welcome, .sed{
+    display: flex;
+}
+.sed-article h2, .welcome-sed h2{
+    color: var(--orange);
+    font-weight: lighter;
+    margin-bottom: 25px;
+}
+.article-welcome a, .sed a{
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--blue);
+    text-decoration: none;
+    padding: 0px 11px;
+    padding-top: 5px;
+    animation: upanddown 1s linear 0s infinite;
+}
+.article-welcome, .sed{
+    margin: 20px 0px;
+}
+
+
+
+/* works */
+
+.works h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: lighter;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+.works-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+.works-content img{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.nothing{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 280px;
+}
+.nothing:hover img{
+    transform: scale(1.2, 1.2);
+}
+.nothing:hover .yes-thing{
+    left: -260px;
+}
+.yes-thing{
+    position: absolute;
+    width: 215%;
+    height: 100%;
+    transform: skewX(60deg);
+    opacity: 1;
+    bottom: 1px;
+    left: -1225px;
+    background-color: rgba(0, 0, 0, 0.418);
+    transition: 0.3s;
+}
+
+
+
+/* figure */
+
+figure .container{
+    display: flex;
+    justify-content: space-between;
+}
+figure h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: lighter;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.menu h2{
+    font-size: 25px;
+}
+.menu ul{
+    list-style: none;
+    margin-bottom: 50px;
+}
+.menu ul li{
+    margin: 10px 0px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: var(--grey);
+}
+.menu ul li a:hover{
+    color: var(--blue);
+}
+    /* set up last list  */
+
+.menu ul:last-of-type li:hover::before{
+    animation: rowmove 1s linear 0s infinite;
+}
+.menu ul:last-of-type li::before {
+    content: url(../images-layout1/icon2.png);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1.5em;
+    margin-left: -0.5em;
+}
+    /* set up last list  */
+.image{
+    width: 45%;
+    height: 400px;
+    background-image: url(../images-layout1/25.jpg);
+    background-repeat: no-repeat;
+    background-size: 870px;
+    background-position: top;
+    position: relative;
+}
+.list{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.459);
+    display: flex;
+    align-items: center;
+}
+    /* set up ol */
+.image ol{
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    padding-left: 7.5rem;
+}
+.image ol li{
+    counter-increment: my-awesome-counter;
+    margin-bottom: 25px;
+}
+.image ol li::before {
+    content: counter(my-awesome-counter);
+    font-weight: bold;
+    font-size: 2rem;
+}
+      
+    /* set up done  */
+
+.image ol li::before {
+    content: counter();
+    color: var(--background-blue);
+    font-weight: bold;
+    display: inline-block; 
+    width: 2em;
+    margin-left: -1em;
+}
+.image ol{
+    font-size: 25px;
+}
+.image ol li a{
+    text-decoration: none;
+    color: white;
+}
+.image ol li a:hover{
+    color: var(--background-blue);
+}
+
+
+
+/* footer  */
